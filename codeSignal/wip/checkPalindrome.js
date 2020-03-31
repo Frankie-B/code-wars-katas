@@ -2,28 +2,22 @@
 
 // Given the string, check if it is a palindrome.
 
-function palindromeChecker(str) {
-  str = str.toLowerCase();
-  let onlyLetters = '';
-  let wordReversed = '';
+function checkPalindrome(inputString) {
+  inputString = inputString.toLowerCase();
+  let letters = '';
+  let reverseStr = '';
 
-  for (let i = 0; i < str.length; i++) {
-    if (str[i] >= 'a' && str[i] <= 'z') {
-      onlyLetters += str[i];
+  for (let i = 0; i < inputString.length; i++) {
+    if (inputString[i] >= 'a' && inputString[i] <= 'z') {
+      letters += inputString[i];
     }
   }
 
-  for (let i = onlyLetters.length - 1; i >= 0; i--) {
-    wordReversed += onlyLetters[i];
+  for (let i = letters.length - 1; i >= 0; i--) {
+    reverseStr += letters[i];
   }
-  console.log(wordReversed);
 
-  if (wordReversed === onlyLetters) {
-    console.log(onlyLetters);
-    // console.log(`The string ${str} is a palindrome`);
-  } else {
-    console.log(wordReversed);
-    // console.log(`The string ${str} is not a palindrome`);
-  }
+  return reverseStr === letters ? true : false;
 }
-palindromeChecker('Amor, Roma');
+
+checkPalindrome('aaabaa');
