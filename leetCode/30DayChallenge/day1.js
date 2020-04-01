@@ -10,15 +10,32 @@ Your algorithm should have a linear runtime complexity. Could you implement it w
  **/
 
 var singleNumber = function(nums) {
-  let unique = [];
+  let unique = {};
+  nums.forEach(num => {
+    unique[num] ? unique[num]++ : (unique[num] = 1);
+  });
+
   for (let i = 0; i < nums.length; i++) {
-    if (unique[nums[i]] === undefined) {
-      unique[nums[i]] = 1;
-    } else {
-      return 'Already exists!';
+    if (unique[nums[i]] === 1) {
+      return nums[i];
     }
   }
-  return unique;
 };
 
 singleNumber(2, 2, 1);
+
+// space efficient
+
+// var singleNumber = function(nums) {
+
+//     for (let i = 0; i < nums.length; i++){
+//         let count = 1
+//         for (j = 0; j < nums.length; j++){
+//             if (i !== j && nums[i] === nums[j]){
+//                 count++
+//             }
+
+//         }
+//         if (count === 1) return nums[i]
+//     }
+// };
