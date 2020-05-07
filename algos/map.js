@@ -7,7 +7,8 @@ var b = a.map((v) => v + 1);
 console.log(b); // + 1, log 3, 5, 7
 
 var d = ['1', '2', '3'];
-var c = b.map((v, i) => v + (i + d[i]));
+var c = b.map((v, i) => v + parseInt(d[i]));
+
 console.log(c); // + d[i] , logs: [4, 7, 10]
 
 // console.clear();
@@ -15,14 +16,32 @@ console.log(c); // + d[i] , logs: [4, 7, 10]
 var a = [1, 2, 3];
 
 // map and log stuff urself :)
+a.map((v) => v);
+
+console.log(a);
 
 // map to "times index", logs [0, 2, 6]
+let e = a.map((v, i) => v * i);
+console.log(e);
 
 // map to index, yes, loose all the values and replace by the index. logs [0, 1, 2]
 
+// map to "times index", logs [0, 2, 6]
+// let f = e.map(function(v, i) {
+//   return i
+// })
+// console.log(f);
+
+let f = e.map((v, i) => i);
+console.log(f);
+
 // map to nested, logs [[1, 2, 3], [1, 2, 3], [1, 2, 3]]
 
-var a = [{ name: 'cats' }, { name: 'dogs' }, { name: 'tigers' }];
+// var a = [
+//   { name: 'cats' },
+//   { name: 'dogs' },
+//   { name: 'tigers' },
+// ]
 
 // map to [{ name: 'cats', value: 'Cat' } etc
 

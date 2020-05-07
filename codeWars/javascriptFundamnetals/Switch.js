@@ -116,3 +116,12 @@ function howManydays(month) {
 //    switch
 //   return [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31][m - 1];
 // }
+
+// insane solution 4
+
+/**
+ * 
+ * 
+ * howManydays=ـ=>//switch
+ـ-2?30+((7<ـ)+ـ)%2:28
+ */
