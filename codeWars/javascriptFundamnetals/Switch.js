@@ -80,10 +80,10 @@ function howManydays(month) {
 }
 
 // clever solution:
-function howManydays(month) {
-  return new Date(2015, month, 0).getDate();
-  ('switch');
-}
+// function howManydays(month) {
+//   return new Date(2015, month, 0).getDate();
+//   ('switch');
+// }
 
 // clever solution 2:
 // [,,,,-,,-,,,-,,-][-]?31:28?2--:30
