@@ -4,6 +4,7 @@ var a = [1, 2, 3].map((v) => v * 2);
 console.log(a); // * 2 logs: [2, 4, 6]
 
 var b = a.map((v) => v + 1);
+
 console.log(b); // + 1, log 3, 5, 7
 
 var d = ['1', '2', '3'];
@@ -22,12 +23,14 @@ console.log(a);
 
 // map to "times index", logs [0, 2, 6]
 let e = a.map((v, i) => v * i);
+
 console.log(e);
 
 // map to index, yes, loose all the values and replace by the index. logs [0, 1, 2]
 
 // map to "times index", logs [0, 2, 6]
 let f = e.map((v, i) => i);
+
 console.log(f);
 
 console.clear();
@@ -39,6 +42,7 @@ let x = [
 ];
 
 x.map((v) => v);
+
 console.log(x);
 
 var a2 = [{ name: 'john' }, { name: 'frank' }, { name: 'ron' }];
@@ -48,14 +52,14 @@ var a2 = [{ name: 'john' }, { name: 'frank' }, { name: 'ron' }];
 //   { name: 'frank', number: 1 },
 //   { name: 'ron', number: 1 }
 // ]
-a2.map(function (v) {
+let nameAndNumber = a2.map(function (v) {
   return {
-    name: a2.name,
-    number: (v.number = 1),
+    name: v.name,
+    number: 1,
   };
 });
 
-console.log(a2);
+console.log(nameAndNumber);
 
 const b2 = a2.map(function (v) {
   return {
@@ -133,7 +137,9 @@ console.log(combineArr);
 //   name: 'cats'
 // }]
 let complexAnimalMap = animals.map(function (v, i) {
-  return `${animals.length} objects in this array , i am ${i} and its about ${v.value}`;
+  return `${
+    animals.length
+  } objects in this array , i am ${i + 1} and its about ${v.value}`;
 });
 
 console.log(complexAnimalMap);
@@ -142,7 +148,12 @@ const lastB = [
   {
     a: [1],
   },
-].map((v) => v.a);
+].map(function (v) {
+  return {
+    a: v.a,
+  };
+});
+
 console.log(lastB);
 
 const finalB = [
@@ -158,3 +169,80 @@ const finalB = [
 });
 
 console.log(finalB);
+
+console.clear();
+
+const strArr = ['hi', 'bye', 'whyyy??'];
+
+// map to string.length [2, 3, 7]
+
+let mapStrArr = strArr.map(function (v) {
+  return v.length;
+});
+
+console.log(mapStrArr);
+// map to square, [4, 9, 49]
+
+let squaredArr = [4, 9, 49].map(function (v) {
+  return v * v;
+});
+
+console.log(squaredArr);
+
+// map to, if bigger than 6, + 1 result [6, 8, 9]
+const numArrObj = [{ size: 6 }, { size: 7 }, { size: 8 }];
+
+let addNumArrObj = numArrObj.map(function (v) {
+  if (v.size > 6) {
+    v.size += 1;
+  }
+  return v;
+});
+
+console.log(addNumArrObj);
+
+// map all true values to be false
+const nestedArrObj = [
+  {
+    size: {
+      number: {
+        why: [1, true],
+      },
+    },
+  },
+];
+
+let trueToFalse = nestedArrObj.map(function (v) {
+  return v.size.number.why.map(function (v) {
+    return typeof v === 'boolean' ? false : v;
+  });
+});
+
+console.log(trueToFalse);
+
+console.clear();
+const cars = [
+  { brand: 'volvo', amount: 50 },
+  { brand: 'ford', amount: 200 },
+  { brand: 'ferrari', amount: 1 },
+];
+const productions = [
+  { brand: 'volvo', location: 'stockholm' },
+  { brand: 'ferrari', location: 'rome' },
+  { brand: 'ford', location: 'detroid' },
+];
+const drivers = [
+  { brand: 'volvo', work: 'doctor' },
+  { brand: 'ford', work: 'machine operator' },
+  { brand: 'ferrari', work: 'hotshot' },
+];
+
+// log the amount of hotshots-cars => 1
+
+// log the the city where the car of the doctor was build => stockholm
+
+// this one is tuff: write a function, that takes in drivers, and returns a combined array like this:
+// [
+//   { brand: 'volvo', work: 'doctor', location: 'stockholm', amount: 50 },
+//   etc
+// ]
