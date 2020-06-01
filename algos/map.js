@@ -229,7 +229,7 @@ const cars = [
 const productions = [
   { brand: 'volvo', location: 'stockholm' },
   { brand: 'ferrari', location: 'rome' },
-  { brand: 'ford', location: 'detroid' },
+  { brand: 'ford', location: 'detroit' },
 ];
 const drivers = [
   { brand: 'volvo', work: 'doctor' },
