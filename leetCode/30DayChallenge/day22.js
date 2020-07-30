@@ -17,17 +17,17 @@
  * @param {number} k
  * @return {number}
  */
-var subarraySum = function (nums, k) {
-  let result = 0;
-  let sum = 0;
-  const sumCount = new Map([[0, 1]]);
+const subarraySum = function(nums, k) {
+    let result = 0;
+    let sum = 0;
+    const sumCount = new Map([[0, 1]]);
 
-  for (let num of nums) {
-    sum += num;
-    result += sumCount.get(sum - k) || 0;
+    for (const num of nums) {
+        sum += num;
+        result += sumCount.get(sum - k) || 0;
 
-    sumCount.set(sum, (sumCount.get(sum) || 0) + 1);
-  }
+        sumCount.set(sum, (sumCount.get(sum) || 0) + 1);
+    }
 
-  return result;
+    return result;
 };

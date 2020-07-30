@@ -7,19 +7,19 @@ Note:
 
 Your algorithm should have a linear runtime complexity. Could you implement it without using extra memory?
 *
- **/
+ * */
 
-var singleNumber = function(nums) {
-  let unique = {};
-  nums.forEach(num => {
-    unique[num] ? unique[num]++ : (unique[num] = 1);
-  });
+const singleNumber = function(nums) {
+    const unique = {};
+    nums.forEach(num => {
+        unique[num] ? unique[num]++ : (unique[num] = 1);
+    });
 
-  for (let i = 0; i < nums.length; i++) {
-    if (unique[nums[i]] === 1) {
-      return nums[i];
+    for (let i = 0; i < nums.length; i++) {
+        if (unique[nums[i]] === 1) {
+            return nums[i];
+        }
     }
-  }
 };
 
 singleNumber(2, 2, 1);

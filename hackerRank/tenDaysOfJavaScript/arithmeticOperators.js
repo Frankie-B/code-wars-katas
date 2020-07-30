@@ -13,8 +13,6 @@ getArea(length, width): Calculate and return the area of a rectangle having side
 getPerimeter(length, width): Calculate and return the perimeter of a rectangle having sides length  and width.
  */
 
-'use strict';
-
 process.stdin.resume();
 process.stdin.setEncoding('utf-8');
 
@@ -22,22 +20,20 @@ let inputString = '';
 let currentLine = 0;
 
 process.stdin.on('data', inputStdin => {
-  inputString += inputStdin;
+    inputString += inputStdin;
 });
 
 process.stdin.on('end', _ => {
-  inputString = inputString
-    .trim()
-    .split('\n')
-    .map(string => {
-      return string.trim();
-    });
+    inputString = inputString
+        .trim()
+        .split('\n')
+        .map(string => string.trim());
 
-  main();
+    main();
 });
 
 function readLine() {
-  return inputString[currentLine++];
+    return inputString[currentLine++];
 }
 
 /**
@@ -47,12 +43,12 @@ function readLine() {
  *   width: The width of the rectangle.
  *
  *	Return a number denoting the rectangle's area.
- **/
+ * */
 function getArea(length, width) {
-  let area;
-  area = length * width;
+    let area;
+    area = length * width;
 
-  return area;
+    return area;
 }
 
 /**
@@ -62,10 +58,10 @@ function getArea(length, width) {
  *   width: The width of the rectangle.
  *
  *	Return a number denoting the perimeter of a rectangle.
- **/
+ * */
 function getPerimeter(length, width) {
-  let perimeter;
-  perimeter = 2 * (length + width);
+    let perimeter;
+    perimeter = 2 * (length + width);
 
-  return perimeter;
+    return perimeter;
 }

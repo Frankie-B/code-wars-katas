@@ -10,9 +10,9 @@ Chips	$2.40
 Soda	$1.00
 Create 5 variables and use the cost from the table above to set their values.
  */
-let money = 10;
-let candy = 1.42;
-let chips = 2.4;
-let soda = 1.0;
+const money = 10;
+const candy = 1.42;
+const chips = 2.4;
+const soda = 1.0;
 
-let change = money - candy - chips - soda;
+const change = money - candy - chips - soda;

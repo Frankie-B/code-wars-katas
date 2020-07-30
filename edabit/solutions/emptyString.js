@@ -6,6 +6,6 @@
  */
 
 function isEmpty(s) {
-  return s === '' ? true : false;
+    return s === '';
 }
 isEmpty('');

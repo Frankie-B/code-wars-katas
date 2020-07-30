@@ -7,21 +7,20 @@ A happy number is a number defined by the following process: Starting with any p
  */
 
 var isHappy = function(n, counter = 0) {
-  result = false;
-  if (counter < 8) {
-    let arr = n
-      .toString()
-      .split('')
-      .map(n => n * n);
-    let sum = arr.reduce((acc, curr) => acc + curr, 0);
-    if (sum === 1) {
-      return (result = true);
-    } else {
-      counter++;
-      isHappy(sum, counter);
+    result = false;
+    if (counter < 8) {
+        const arr = n
+            .toString()
+            .split('')
+            .map(n => n * n);
+        const sum = arr.reduce((acc, curr) => acc + curr, 0);
+        if (sum === 1) {
+            return (result = true);
+        }
+        counter++;
+        isHappy(sum, counter);
     }
-  }
-  return result;
+    return result;
 };
 
 isHappy(19);

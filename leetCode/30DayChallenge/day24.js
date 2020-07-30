@@ -27,25 +27,24 @@
 /**
  * @param {number} capacity
  */
-var LRUCache = function (capacity) {
-  this.cache = new Map();
-  this.list = [];
-  this.capacity = capacity;
+const LRUCache = function(capacity) {
+    this.cache = new Map();
+    this.list = [];
+    this.capacity = capacity;
 };
 /**
  * @param {number} key
  * @return {number}
  */
-LRUCache.prototype.get = function (key) {
-  if (this.cache.has(key)) {
-    let index = this.list.indexOf(key);
-    let removedKey = this.list[index];
-    this.list.splice(index, 1);
-    this.list.push(removedKey);
-    return this.cache.get(key);
-  } else {
+LRUCache.prototype.get = function(key) {
+    if (this.cache.has(key)) {
+        const index = this.list.indexOf(key);
+        const removedKey = this.list[index];
+        this.list.splice(index, 1);
+        this.list.push(removedKey);
+        return this.cache.get(key);
+    }
     return -1;
-  }
 };
 
 /**
@@ -53,18 +52,18 @@ LRUCache.prototype.get = function (key) {
  * @param {number} value
  * @return {void}
  */
-LRUCache.prototype.put = function (key, value) {
-  if (!this.cache.has(key)) {
-    if (this.cache.size === this.capacity) {
-      let removedKey = this.list.shift();
-      this.cache.delete(removedKey);
+LRUCache.prototype.put = function(key, value) {
+    if (!this.cache.has(key)) {
+        if (this.cache.size === this.capacity) {
+            const removedKey = this.list.shift();
+            this.cache.delete(removedKey);
+        }
+        this.cache.set(key, value);
+        this.list.push(key);
+    } else {
+        this.cache.set(key, value);
+        this.get(key);
     }
-    this.cache.set(key, value);
-    this.list.push(key);
-  } else {
-    this.cache.set(key, value);
-    this.get(key);
-  }
 };
 
 /**

@@ -5,7 +5,7 @@
  */
 
 function isSameNum(num1, num2) {
-  return num1 === num2 ? true : false;
+    return num1 === num2;
 }
 
 isSameNum(2, 2);

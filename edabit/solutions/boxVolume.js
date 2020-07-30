@@ -5,5 +5,5 @@ Create a function that takes an object argument sizes (contains width, length, h
  */
 
 function volumeOfBox(sizes) {
-  return sizes.width * sizes.length * sizes.height;
+    return sizes.width * sizes.length * sizes.height;
 }

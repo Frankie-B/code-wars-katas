@@ -3,21 +3,21 @@
 // Given the string, check if it is a palindrome.
 
 function checkPalindrome(inputString) {
-  inputString = inputString.toLowerCase();
-  let letters = '';
-  let reverseStr = '';
+    inputString = inputString.toLowerCase();
+    let letters = '';
+    let reverseStr = '';
 
-  for (let i = 0; i < inputString.length; i++) {
-    if (inputString[i] >= 'a' && inputString[i] <= 'z') {
-      letters += inputString[i];
+    for (let i = 0; i < inputString.length; i++) {
+        if (inputString[i] >= 'a' && inputString[i] <= 'z') {
+            letters += inputString[i];
+        }
     }
-  }
 
-  for (let i = letters.length - 1; i >= 0; i--) {
-    reverseStr += letters[i];
-  }
+    for (let i = letters.length - 1; i >= 0; i--) {
+        reverseStr += letters[i];
+    }
 
-  return reverseStr === letters ? true : false;
+    return reverseStr === letters;
 }
 
 checkPalindrome('aaabaa');

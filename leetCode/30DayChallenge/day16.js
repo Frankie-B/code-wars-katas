@@ -22,28 +22,28 @@
  * @param {string} s
  * @return {boolean}
  */
-var checkValidString = function (s) {
-  let left = 0,
-    right = 0,
-    wild = 0;
-  let copyArr = [[0, 0, 0]];
-  for (let i = 1; i < s.length; i++) {
-    if (s[i - 1] === '(') left++;
-    else if (s[i - 1] === ')') right++;
-    else wild++;
-    copyArr.push([left, right, wild]);
-  }
-  (left = 0), (right = 0), (wild = 0);
-  for (let i = s.length - 1; i >= 0; i--) {
-    if (s[i] === ')') {
-      let val = 1 + copyArr[i][1] - copyArr[i][0] - copyArr[i][2];
-      if (val > 0) return false;
-      right++;
-    } else if (s[i] === '(') {
-      let val = 1 + left - right - wild;
-      if (val > 0) return false;
-      left++;
-    } else wild++;
-  }
-  return true;
+const checkValidString = function(s) {
+    let left = 0;
+    let right = 0;
+    let wild = 0;
+    const copyArr = [[0, 0, 0]];
+    for (let i = 1; i < s.length; i++) {
+        if (s[i - 1] === '(') left++;
+        else if (s[i - 1] === ')') right++;
+        else wild++;
+        copyArr.push([left, right, wild]);
+    }
+    (left = 0), (right = 0), (wild = 0);
+    for (let i = s.length - 1; i >= 0; i--) {
+        if (s[i] === ')') {
+            const val = 1 + copyArr[i][1] - copyArr[i][0] - copyArr[i][2];
+            if (val > 0) return false;
+            right++;
+        } else if (s[i] === '(') {
+            const val = 1 + left - right - wild;
+            if (val > 0) return false;
+            left++;
+        } else wild++;
+    }
+    return true;
 };

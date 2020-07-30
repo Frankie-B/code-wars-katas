@@ -1,4 +1,4 @@
-/**Your task is to calculate logical value of boolean array. Test arrays are one-dimensional and their size is in the range 1-50.
+/** Your task is to calculate logical value of boolean array. Test arrays are one-dimensional and their size is in the range 1-50.
 
 Links referring to logical operations: AND, OR and XOR.
 

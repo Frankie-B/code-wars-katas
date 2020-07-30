@@ -15,18 +15,18 @@
 // misson 2:
 // After misson 1 finished. you should click "Submit" to see my three questions, and write the answer in function ```answer1, answer2,answer3```
 
-var a1 = 'A',
-  a2 = 'a',
-  b1 = 'B',
-  b2 = 'b',
-  c1 = 'C',
-  c2 = 'c',
-  d1 = 'D',
-  d2 = 'd',
-  e1 = 'E',
-  e2 = 'e',
-  n1 = 'N',
-  n2 = 'n';
+const a1 = 'A';
+const a2 = 'a';
+const b1 = 'B';
+const b2 = 'b';
+const c1 = 'C';
+const c2 = 'c';
+const d1 = 'D';
+const d2 = 'd';
+const e1 = 'E';
+const e2 = 'e';
+const n1 = 'N';
+const n2 = 'n';
 
 const Dad = () => `${d1}` + `${a2}` + `${d2}`;
 

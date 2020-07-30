@@ -8,15 +8,13 @@
 // Output: love
 
 function LongestWord(sen) {
-  // code goes here
-  const stringArray = sen.split(' ');
-  const longestWord = stringArray.reduce((a, b) => {
-    return b.length > a.length ? b : a;
-  });
-  return longestWord;
+    // code goes here
+    const stringArray = sen.split(' ');
+    const longestWord = stringArray.reduce((a, b) => (b.length > a.length ? b : a));
+    return longestWord;
 }
 
-/****************** Approaches*********************** */
+/** **************** Approaches*********************** */
 // 1 Find the Longest Word With the sort() Method
 // function findLongestWord(str) {
 // Step 1. Split the string into an array of strings
@@ -41,7 +39,7 @@ function LongestWord(sen) {
   */
 
 // Step 3. Return the length of the first element of the array
-//return longestWord[0].length; // var longestWord = ["jumped", "quick", "brown", "over", "lazy", "The", "fox", "the", "dog"];
+// return longestWord[0].length; // var longestWord = ["jumped", "quick", "brown", "over", "lazy", "The", "fox", "the", "dog"];
 // longestWord[0]="jumped" => jumped".length => 6
 // }
 
@@ -85,9 +83,9 @@ function LongestWord(sen) {
      8th iteration:        7             yes             8   if("lazy".length > 6)? => if(4 > 6)?    longestWord = 6 
      9th iteration:        8             yes             9   if("dog".length > 6)? => if(3 > 6)?     longestWord = 6 
      10th iteration:       9             no               
-     End of the FOR Loop*/
+     End of the FOR Loop */
 
-//Step 4. Return the longest word
+// Step 4. Return the longest word
 // return longestWord; // 6
 // }
 

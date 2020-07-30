@@ -11,7 +11,7 @@ Best of luck!
  */
 
 function greaterThanLessThan(a, b, c) {
-  return a < b < c;
+    return a < b < c;
 }
 
 greaterThanLessThan();

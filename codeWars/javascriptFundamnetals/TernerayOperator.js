@@ -49,7 +49,7 @@
 // You can use if..else or ternary operator to complete it.
 
 function saleHotdogs(n) {
-  n * (n < 5 ? 100 : n < 10 ? 95 : 90);
+    n * (n < 5 ? 100 : n < 10 ? 95 : 90);
 }
 
 // clever solution

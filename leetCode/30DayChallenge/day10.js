@@ -25,38 +25,38 @@ minStack.getMin();   --> Returns -2.
  * initialize your data structure here.
  */
 
-var MinStack = function () {
-  this.i = [];
+const MinStack = function() {
+    this.i = [];
 };
 
 /**
  * @param {number} x
  * @return {void}
  */
-MinStack.prototype.push = function (x) {
-  this.i.push(x);
+MinStack.prototype.push = function(x) {
+    this.i.push(x);
 };
 
 /**
  * @return {void}
  */
-MinStack.prototype.pop = function (x) {
-  this.i.pop();
+MinStack.prototype.pop = function(x) {
+    this.i.pop();
 };
 
 /**
  * @return {number}
  */
-MinStack.prototype.top = function () {
-  return this.s[this.s.length - 1];
+MinStack.prototype.top = function() {
+    return this.s[this.s.length - 1];
 };
 
 /**
  * @return {number}
  */
 
-MinStack.prototype.getMin = function () {
-  return Math.min(...this.s);
+MinStack.prototype.getMin = function() {
+    return Math.min(...this.s);
 };
 
 /**

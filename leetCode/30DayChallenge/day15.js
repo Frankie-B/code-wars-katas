@@ -16,19 +16,19 @@
  * @param {number[]} nums
  * @return {number[]}
  */
-var productExceptSelf = function (nums) {
-  const output = [];
-  const size = nums.length;
-  // calculate product from the left side
-  for (let i = 0, acc = 1; i < size; i++) {
-    output[i] = acc;
-    acc *= nums[i];
-  }
-  // calculate product from the right side
-  for (let i = size - 1, acc = 1; i >= 0; i--) {
-    output[i] *= acc;
-    acc *= nums[i];
-  }
+const productExceptSelf = function(nums) {
+    const output = [];
+    const size = nums.length;
+    // calculate product from the left side
+    for (let i = 0, acc = 1; i < size; i++) {
+        output[i] = acc;
+        acc *= nums[i];
+    }
+    // calculate product from the right side
+    for (let i = size - 1, acc = 1; i >= 0; i--) {
+        output[i] *= acc;
+        acc *= nums[i];
+    }
 
-  return output;
+    return output;
 };

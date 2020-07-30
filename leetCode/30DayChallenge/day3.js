@@ -8,23 +8,23 @@
  * @param {number[]} nums
  * @return {number}
  */
-var maxSubArray = function(nums) {
-  var sum = 0,
-    max = Number.NEGATIVE_INFINITY,
-    len = nums.length,
-    i;
+const maxSubArray = function(nums) {
+    let sum = 0;
+    let max = Number.NEGATIVE_INFINITY;
+    const len = nums.length;
+    let i;
 
-  for (i = 0; i < len; i++) {
-    sum += nums[i];
+    for (i = 0; i < len; i++) {
+        sum += nums[i];
 
-    max = Math.max(sum, max);
+        max = Math.max(sum, max);
 
-    if (sum < 0) {
-      sum = 0;
+        if (sum < 0) {
+            sum = 0;
+        }
     }
-  }
 
-  return max;
+    return max;
 };
 
 maxSubArray([-2, 1, -3, 4, -1, 2, 1, -5, 4]);

@@ -22,15 +22,15 @@
  * @param {number[]} nums
  * @return {boolean}
  */
-var canJump = function (nums) {
-  var jump = 0;
-  var len = nums.length;
-  for (var i = 0; i < len; i++) {
-    jump = Math.max(nums[i], jump);
-    if (jump === 0 && i !== len - 1) return false;
-    jump--;
-  }
-  return true;
+const canJump = function(nums) {
+    let jump = 0;
+    const len = nums.length;
+    for (let i = 0; i < len; i++) {
+        jump = Math.max(nums[i], jump);
+        if (jump === 0 && i !== len - 1) return false;
+        jump--;
+    }
+    return true;
 };
 
 // clean solution
@@ -42,7 +42,7 @@ var canJump = function (nums) {
 //         };
 //     };
 //     return last === 0;
-//};
+// };
 
 // solution two
 //

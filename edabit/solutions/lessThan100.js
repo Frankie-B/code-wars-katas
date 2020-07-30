@@ -10,8 +10,8 @@
 //  83 + 34 = 117
 
 function lessThan100(a, b) {
-  let sum = a + b;
-  return sum >= 100 ? false : true;
+    const sum = a + b;
+    return !(sum >= 100);
 }
 
 // const lessThan100 = (a, b) => (a + b) < 100

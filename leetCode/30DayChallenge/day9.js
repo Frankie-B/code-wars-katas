@@ -25,19 +25,19 @@ Output: false
 Explanation: S becomes "c" while T becomes "b".
  */
 
-var backspaceCompare = function (S, T) {
-  const build = (S) => {
-    let st = [];
-    for (let i = 0, len = S.length; i < len; ++i) {
-      if (S[i] == '#') {
-        st.pop(); // if called on empty array, return undefined.
-      } else {
-        st.push(S[i]);
-      }
-    }
-    return st.join('');
-  };
-  return build(S) === build(T);
+const backspaceCompare = function(S, T) {
+    const build = S => {
+        const st = [];
+        for (let i = 0, len = S.length; i < len; ++i) {
+            if (S[i] == '#') {
+                st.pop(); // if called on empty array, return undefined.
+            } else {
+                st.push(S[i]);
+            }
+        }
+        return st.join('');
+    };
+    return build(S) === build(T);
 };
 
 backspaceCompare('ab#c', 'ab#c');

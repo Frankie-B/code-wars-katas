@@ -6,15 +6,15 @@
 If there're duplicates in arr, count them seperately.
  */
 
-var countElements = function (arr) {
-  let count = 0;
-  let arr2 = [...arr];
-  arr.forEach((n) => {
-    if (arr2.includes(n + 1)) {
-      count++;
-    }
-  });
-  return count;
+const countElements = function(arr) {
+    let count = 0;
+    const arr2 = [...arr];
+    arr.forEach(n => {
+        if (arr2.includes(n + 1)) {
+            count++;
+        }
+    });
+    return count;
 };
 
 countElements;

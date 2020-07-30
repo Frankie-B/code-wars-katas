@@ -29,20 +29,20 @@
  * @param {number[][]} shift
  * @return {string}
  */
-var stringShift = function (s, shift) {
-  let arr = s.split('');
-  shift.forEach((s) => {
-    if (s[0] > 0) {
-      for (let n = 0; n < s[1]; n++) {
-        let a = arr.pop();
-        arr.unshift(a);
-      }
-    } else {
-      for (let n = 0; n < s[1]; n++) {
-        let a = arr.shift();
-        arr.push(a);
-      }
-    }
-  });
-  return arr.join('');
+const stringShift = function(s, shift) {
+    const arr = s.split('');
+    shift.forEach(s => {
+        if (s[0] > 0) {
+            for (let n = 0; n < s[1]; n++) {
+                const a = arr.pop();
+                arr.unshift(a);
+            }
+        } else {
+            for (let n = 0; n < s[1]; n++) {
+                const a = arr.shift();
+                arr.push(a);
+            }
+        }
+    });
+    return arr.join('');
 };

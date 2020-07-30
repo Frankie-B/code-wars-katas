@@ -26,18 +26,18 @@ Note: The length of path between two nodes is represented by the number of edges
  * @param {TreeNode} root
  * @return {number}
  */
-var diameterOfBinaryTree = function (root) {
-  let max = 0;
+const diameterOfBinaryTree = function(root) {
+    let max = 0;
 
-  const maxDepth = (root) => {
-    if (root === null) return 0;
-    const left = maxDepth(root.left);
-    const right = maxDepth(root.right);
-    max = Math.max(max, left + right);
-    return Math.max(left, right) + 1;
-  };
-  maxDepth(root);
-  return max;
+    const maxDepth = root => {
+        if (root === null) return 0;
+        const left = maxDepth(root.left);
+        const right = maxDepth(root.right);
+        max = Math.max(max, left + right);
+        return Math.max(left, right) + 1;
+    };
+    maxDepth(root);
+    return max;
 };
 
 diameterOfBinaryTree([1, 2, 3, 4, 5]);

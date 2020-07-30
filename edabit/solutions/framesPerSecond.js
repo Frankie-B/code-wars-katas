@@ -5,7 +5,7 @@
  */
 
 function frames(minutes, fps) {
-  return minutes * (fps * 60);
+    return minutes * (fps * 60);
 }
 
 frames(10, 25);

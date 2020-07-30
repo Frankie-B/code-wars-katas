@@ -8,12 +8,12 @@ I've defined two array ```odd``` and ```even``` in the function, and also wrote 
  */
 
 function pickIt(arr) {
-  var odd = [],
-    even = [];
-  //coding here
-  for (var i = 0; i < arr.length; i++) {
-    arr[i] % 2 === 0 ? even.push(arr[i]) : odd.push(arr[i]);
-  }
+    const odd = [];
+    const even = [];
+    // coding here
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] % 2 === 0 ? even.push(arr[i]) : odd.push(arr[i]);
+    }
 
-  return [odd, even];
+    return [odd, even];
 }

@@ -7,7 +7,7 @@
  */
 
 function nextEdge(side1, side2) {
-  return side1 + side2 - 1;
+    return side1 + side2 - 1;
 }
 
 nextEdge(5, 9);

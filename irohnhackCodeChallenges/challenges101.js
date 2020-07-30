@@ -7,7 +7,7 @@
 // the filter method ti takes an array and for every element it goes over it and imposes a condition if el length is 4 it returns the element
 
 function friend(input) {
-  return input.filter((n) => n.length === 0);
+    return input.filter(n => n.length === 0);
 }
 
 // 2) Write a function that takes in a string of one or more words and returns the same string, but with the words that have at least five letter in reverse.
@@ -27,10 +27,17 @@ function friend(input) {
 // }
 
 function spinWords(sentence) {
-  return sentence
-    .split(' ')
-    .map((word) => (word.length > 4 ? word.split('').reverse().join('') : word))
-    .join('');
+    return sentence
+        .split(' ')
+        .map(word =>
+            word.length > 4
+                ? word
+                      .split('')
+                      .reverse()
+                      .join('')
+                : word
+        )
+        .join('');
 }
 
 console.log(reverseString('Today is a beautiful day'));

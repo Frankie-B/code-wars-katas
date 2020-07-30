@@ -15,17 +15,17 @@
 
 // Complete the sockMerchant function below.
 function sockMerchant(n, ar) {
-  const sortedArr = [...ar].sort();
-  console.log(sortedArr);
-  let count = 0;
+    const sortedArr = [...ar].sort();
+    console.log(sortedArr);
+    let count = 0;
 
-  for (let i = 0; i < sortedArr.length; i++) {
-    if (sortedArr[i + 1] === sortedArr[i]) {
-      count++; // increment after each iteration
-      i = i + 1; // the number of matching pairs
+    for (let i = 0; i < sortedArr.length; i++) {
+        if (sortedArr[i + 1] === sortedArr[i]) {
+            count++; // increment after each iteration
+            i += 1; // the number of matching pairs
+        }
     }
-  }
-  console.log(count); // final result
+    console.log(count); // final result
 }
 
 sockMerchant(9, [10, 20, 20, 10, 10, 30, 50, 10, 20]);

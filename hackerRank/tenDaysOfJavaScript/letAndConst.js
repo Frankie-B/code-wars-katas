@@ -11,8 +11,6 @@ Use  and  to calculate the  and  of a circle having radius .
 Print  as the first line of output and print  as the second line of output.
  */
 
- 'use strict';
-
 process.stdin.resume();
 process.stdin.setEncoding('utf-8');
 
@@ -24,11 +22,12 @@ process.stdin.on('data', inputStdin => {
 });
 
 process.stdin.on('end', _ => {
-    inputString = inputString.trim().split('\n').map(string => {
-        return string.trim();
-    });
-    
-    main();    
+    inputString = inputString
+        .trim()
+        .split('\n')
+        .map(string => string.trim());
+
+    main();
 });
 
 function readLine() {
@@ -36,18 +35,18 @@ function readLine() {
 }
 
 function main() {
-    const PI = Math.PI;
-    let r = readLine()
-    
+    const { PI } = Math;
+    const r = readLine();
+
     console.log(PI * r * r);
     console.log(2 * PI * r);
 
-    try {    
+    try {
         // Attempt to redefine the value of constant variable PI
         PI = 0;
         // Attempt to print the value of PI
         console.log(PI);
-    } catch(error) {
+    } catch (error) {
         console.error("You correctly declared 'PI' as a constant.");
     }
 }

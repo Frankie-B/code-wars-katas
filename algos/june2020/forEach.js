@@ -10,28 +10,28 @@
 
 console.clear();
 
-var sum = 10;
+const sum = 10;
 
-var sales = [5, 6, 7, 8, 9];
+const sales = [5, 6, 7, 8, 9];
 
 // use forEach to add sales to sum
 // log sum
 
 // Assignment 3
 
-var cars = [
-  {
-    brand: 'audi',
-    amount: 6,
-  },
-  {
-    brand: 'ford',
-    amount: 7,
-  },
-  {
-    brand: 'fiat',
-    amount: 8,
-  },
+const cars = [
+    {
+        brand: 'audi',
+        amount: 6,
+    },
+    {
+        brand: 'ford',
+        amount: 7,
+    },
+    {
+        brand: 'fiat',
+        amount: 8,
+    },
 ];
 
 // log brand and amount on one line for each object in cars array

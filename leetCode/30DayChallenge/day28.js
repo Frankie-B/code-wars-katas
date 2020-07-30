@@ -61,45 +61,45 @@
 /**
  * @param {number[]} nums
  */
-var FirstUnique = function (num) {
-  let q = [];
-  let c = {};
+const FirstUnique = function(num) {
+    const q = [];
+    const c = {};
 
-  num.forEach(function (num) {
-    if (c[num] === undefined) {
-      q.push(num);
-      c[num] = 0;
-    }
-    c[num] += 1;
-  });
-  this.q = q;
-  this.c = c;
+    num.forEach(function(num) {
+        if (c[num] === undefined) {
+            q.push(num);
+            c[num] = 0;
+        }
+        c[num] += 1;
+    });
+    this.q = q;
+    this.c = c;
 };
 
 /**
  * @return {number}
  */
-FirstUnique.prototype.showFirstUnique = function () {
-  let s = this;
-  for (let i = 0; i < this.q.length; i += 1) {
-    if (s.c[s.q[i]] < 2) {
-      return s.q[i];
+FirstUnique.prototype.showFirstUnique = function() {
+    const s = this;
+    for (let i = 0; i < this.q.length; i += 1) {
+        if (s.c[s.q[i]] < 2) {
+            return s.q[i];
+        }
     }
-  }
-  this.q = [];
-  return -1;
+    this.q = [];
+    return -1;
 };
 
 /**
  * @param {number} value
  * @return {void}
  */
-FirstUnique.prototype.add = function (value) {
-  if (this.c[value] === undefined) {
-    this.q.push(value);
-    this.c[value] = 0;
-  }
-  this.c[value] += 1;
+FirstUnique.prototype.add = function(value) {
+    if (this.c[value] === undefined) {
+        this.q.push(value);
+        this.c[value] = 0;
+    }
+    this.c[value] += 1;
 };
 
 /**

@@ -21,24 +21,24 @@
  * @param {number[]} stones
  * @return {number}
  */
-var lastStoneWeight = function (stones) {
-  var result;
-  var res = stones.sort(function (a, b) {
-    return b - a;
-  });
-  for (var i = 0; i < res.length - 1; i++) {
-    if (res[i] == res[i + 1]) {
-      res.shift();
-      res.shift();
-      i--;
-    } else {
-      res[i] = res[i] - res[i + 1];
-      res.splice(i + 1, 1);
-      i--;
-    }
-    var res = stones.sort(function (a, b) {
-      return b - a;
+const lastStoneWeight = function(stones) {
+    let result;
+    var res = stones.sort(function(a, b) {
+        return b - a;
     });
-  }
-  return res;
+    for (let i = 0; i < res.length - 1; i++) {
+        if (res[i] == res[i + 1]) {
+            res.shift();
+            res.shift();
+            i--;
+        } else {
+            res[i] = res[i] - res[i + 1];
+            res.splice(i + 1, 1);
+            i--;
+        }
+        var res = stones.sort(function(a, b) {
+            return b - a;
+        });
+    }
+    return res;
 };

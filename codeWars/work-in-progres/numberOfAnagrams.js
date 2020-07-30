@@ -12,5 +12,5 @@ There are 7 anagrams in the array ["dell", "ledl", "abc", "cba", "bca", "bac"]
  */
 
 function anagramCounter(wordsArray) {
-  return counter;
+    return counter;
 }

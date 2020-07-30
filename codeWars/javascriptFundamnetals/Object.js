@@ -25,9 +25,9 @@
 // ```
 
 function animal(obj) {
-  (this.name = 'dog'), (this.legs = 4), (this.color = 'white');
+    (this.name = 'dog'), (this.legs = 4), (this.color = 'white');
 
-  return `This ${obj.color} ${obj.name} has ${obj.legs} legs.`;
+    return `This ${obj.color} ${obj.name} has ${obj.legs} legs.`;
 }
 
 // clever solutions

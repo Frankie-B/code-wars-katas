@@ -23,7 +23,7 @@
 //   }
 // }
 
-//Challenge: https://www.codewars.com/kata/564e7fc20f0b53eb02000106
+// Challenge: https://www.codewars.com/kata/564e7fc20f0b53eb02000106
 
 // cuont the number of consonants in a string
 

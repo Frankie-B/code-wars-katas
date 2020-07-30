@@ -24,32 +24,31 @@
  * @param {character[][]} grid
  * @return {number}
  */
-var numIslands = function (grid) {
-  if (!grid || !grid.length || !grid[0] || !grid[0].length) return 0;
+const numIslands = function(grid) {
+    if (!grid || !grid.length || !grid[0] || !grid[0].length) return 0;
 
-  let islands = 0;
-  const [width, height] = [grid.length, grid[0].length];
-  const [deltaX, deltaY] = [
-    [1, 0, -1, 0],
-    [0, -1, 0, 1],
-  ];
+    let islands = 0;
+    const [width, height] = [grid.length, grid[0].length];
+    const [deltaX, deltaY] = [
+        [1, 0, -1, 0],
+        [0, -1, 0, 1],
+    ];
 
-  const dfs = (grid, x, y) => {
-    if (x < 0 || x >= width || y < 0 || y >= height || grid[x][y] !== '1')
-      return;
-    grid[x][y] = 'x';
-    for (let i = 0; i < deltaX.length; i++) {
-      dfs(grid, x + deltaX[i], y + deltaY[i]);
+    const dfs = (grid, x, y) => {
+        if (x < 0 || x >= width || y < 0 || y >= height || grid[x][y] !== '1') return;
+        grid[x][y] = 'x';
+        for (let i = 0; i < deltaX.length; i++) {
+            dfs(grid, x + deltaX[i], y + deltaY[i]);
+        }
+    };
+
+    for (let i = 0; i < width; i++) {
+        for (let j = 0; j < height; j++) {
+            if (grid[i][j] === '1') {
+                dfs(grid, i, j);
+                islands++;
+            }
+        }
     }
-  };
-
-  for (let i = 0; i < width; i++) {
-    for (let j = 0; j < height; j++) {
-      if (grid[i][j] === '1') {
-        dfs(grid, i, j);
-        islands++;
-      }
-    }
-  }
-  return islands;
+    return islands;
 };

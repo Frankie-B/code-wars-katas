@@ -39,8 +39,8 @@
 // When you have finished the work, click "Run Tests" to see if your code is working properly.
 
 function helloWorld() {
-  var str = 'Hello World!';
-  console.log(str);
+    const str = 'Hello World!';
+    console.log(str);
 }
 
 helloWorld();

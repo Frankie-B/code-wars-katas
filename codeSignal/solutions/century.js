@@ -5,8 +5,8 @@
  */
 
 function centuryFromYear(year) {
-  let cent = Math.floor(year / 100);
-  return year % 100 === 0 ? cent : cent + 1;
+    const cent = Math.floor(year / 100);
+    return year % 100 === 0 ? cent : cent + 1;
 }
 
 centuryFromYear();
